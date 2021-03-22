@@ -1,0 +1,28 @@
+/* ! Typography */
+
+@font-face {
+  font-family: 'Neue Montreal';
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/NeueMontreal-Medium.woff2') format('woff2'),
+  url('NeueMontreal-Medium.woff') format('woff');
+}
+
+
+
+h1,h2,h3,h4,h5,h6{font-family: 'Neue Montreal';}
+p{font-size: 18px;line-height: 28px; margin-bottom: 20px;}
+
+a{color: $color-link;}
+a:hover{color: $color-hover;}
+
+.headline{font-size: 90px;margin: 0 0 40px 0; }
+h1, .title{font-size: 50px;margin: 0 0 20px 0;}
+h3, h2, .midtitle{font-size: 35px;margin: 0 0 20px 0;}
+h4, .subtitle{font-size: 25px;margin: 0 0 20px 0;}
+
+@media (max-width: 768px) {
+  .headline{font-size: 50px;margin-bottom: 20px;}
+  .title{font-size: 35px;}
+  .subtitle{font-size: 20px;}
+}

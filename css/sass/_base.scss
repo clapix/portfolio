@@ -1,0 +1,40 @@
+/* css reset */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/* main containers */
+
+body, html { margin: 0; padding: 0; height: 100vh;}
+body.admin-bar .navbar-fixed-top { position: fixed; top: 32px; z-index: 1000;}
+
+html, body{height: 100vh;}
+body{color:$black;font-family: Lato; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+
+@media (min-width: 1024px) {
+  body { overflow: hidden }
+}
+
+.scroll-container{overflow:hidden;}
+.container{ margin: 0 auto; max-width: 1200px;}
+
+
+
+/* functional stuff */
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
