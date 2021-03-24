@@ -29,45 +29,60 @@
 
 
   <div class="preloader"></div>
+      
+    <a href="<?php echo home_url(); ?>" class="logo">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="">
+    </a>
+  
 
-  <div class="fixed">
+    <div class="menu-side">
 
-    <div class="header">
-
-      <div class="header__logo">
-        <a href="<?php echo home_url(); ?>" class="logo">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="">
-        </a>
-      </div>
-
-      <div class="header__menu" id="main-menu">
-
-        <?php /* add menu set in location header */
-        wp_nav_menu(array(
-          'theme_location' => 'header',
-          'walker' => new Clean_Walker_Nav(),
-          'container' => false,
-          'items_wrap' => '<ul class="site-nav">%3$s</ul>'
-        ));
-        ?>
-
-        <div class="line-menu"></div>
-
-      </div>
-
-      <div class="header__cta">
-        <a href="<?php echo get_permalink( get_page_by_path( 'contatti' ) ) ?>" class="button">Contatti</a>
-      </div>
-
-      <div class="header__icon">
-        <div class="icon-hamburger">
-          <span></span>
-        </div>
-      </div>
+      <?php /* add menu set in location header */
+      wp_nav_menu(array(
+        'theme_location' => 'header',
+        'walker' => new Clean_Walker_Nav(),
+        'container' => false,
+        'items_wrap' => '<ul class="">%3$s</ul>'
+      ));
+      ?>
 
     </div>
 
-  </div>
+    <div class="menu-hidden">
+
+      <div class="grid">
+        <div class="col-50 vertical-center">
+
+          <?php /* add menu set in location header */
+          wp_nav_menu(array(
+            'theme_location' => 'header',
+            'walker' => new Clean_Walker_Nav(),
+            'container' => false,
+            'items_wrap' => '<ul class="menu-hidden__items">%3$s</ul>'
+          ));
+          ?>
+
+        </div>
+
+        <div class="col-50 vertical-center">
+
+          <div>
+            <h3>Titolo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perferendis repudiandae magni ullam tenetur, possimus soluta, omnis facere, quas eius hic obcaecati ducimus sunt excepturi quaerat dolores nihil ex blanditiis.</p>
+            <a href="<?php echo get_permalink( get_page_by_path( 'contatti' ) ) ?>" class="button">Contatti</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="hamburger">
+      <div class="icon-hamburger">
+        <span></span>
+      </div>
+    </div>
+
+
 
 
   <?php if (is_page_template( 'page-templates/home-page.php' )) { /* if is home page template show the code inside */ ?>

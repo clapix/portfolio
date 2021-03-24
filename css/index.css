@@ -125,177 +125,43 @@ h4, .subtitle {
   }
 }
 /* ! Header */
-.fixed {
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  top: 0;
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-.header__icon {
-  display: none;
-  width: 130px;
-  position: relative;
-  color: #ffffff;
-}
-
-.header__cta,
-.header__logo {
-  width: 130px;
-}
-
-.header__cta .button {
-  width: 100%;
-  text-decoration: none;
-}
-
-.site-nav {
-  padding: 0;
-  list-style-type: none;
-  position: relative;
-}
-
-.site-nav > li {
-  display: inline-block;
-}
-
-.site-nav > li a {
-  display: block;
-  padding: 20px;
-  color: #1b1b1b;
-  opacity: 0.5;
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .has-cover .site-nav > li a {
-    color: #ffffff;
-  }
-}
 .logo {
   display: block;
   padding: 10px;
   text-align: center;
   margin-top: 15px;
+  z-index: 110;
 }
 
-/* Active state */
-.header__menu {
-  position: relative;
+/* ! Menu Side */
+.menu-side {
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
 }
 
-.line-menu {
-  position: absolute;
-  height: 2px;
-  background: #F54C1E;
-  bottom: 10px;
-}
-
-.active a {
-  opacity: 1 !important;
-}
-
-@media (max-width: 768px) {
-  .line-menu {
-    display: none;
-  }
-}
-/* ! Cover */
-.cover {
-  height: 100vh;
-  position: relative;
-  background: #333;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  z-index: 0;
-}
-
-.cover__content {
-  color: #fff;
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.cover:before {
-  content: " ";
-  width: 100%;
-  height: 100%;
-  background: #000;
-  position: absolute;
+/* ! Menu Hidden */
+.menu-hidden {
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
-  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  background: #ff3a00;
+  z-index: 100;
 }
 
-/* Has Cover */
-.has-cover .header .button {
+.menu-hidden__items {
+  list-style-type: none;
+}
+
+.menu-hidden__items a {
   color: #ffffff;
-  border-color: #ffffff;
-}
-
-.has-cover .logo {
-  filter: invert(1);
-}
-
-.scroll-down.has-cover .site-nav > li a {
-  color: #1b1b1b;
-}
-
-.scroll-down.has-cover .header .button {
-  color: #1b1b1b;
-  border-color: #1b1b1b;
-}
-
-.scroll-down.has-cover .logo {
-  filter: invert(0);
+  font-size: 60px;
 }
 
 @media (max-width: 767px) {
-  .header__icon {
-    display: block;
-  }
-
-  .header__menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 130px);
-    height: 100vh;
-    background: #ffffff;
-    transform: translateX(-100%);
-    transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-    z-index: 10;
-  }
-
-  .header__menu--open {
-    transform: translateX(0%);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .site-nav li {
-    width: 100%;
-  }
-
-  .site-nav li a {
-    width: 100%;
-    display: block;
-    color: #1b1b1b;
-    font-size: 23px;
-  }
-
   .icon-hamburger {
     width: 30px;
     height: 30px;
@@ -348,27 +214,43 @@ h4, .subtitle {
     background: #1b1b1b;
   }
 
-  .has-cover .icon-hamburger span,
-.has-cover .icon-hamburger span:before,
-.has-cover .icon-hamburger span:after {
-    background: #ffffff;
-  }
-
-  .has-cover.scroll-down .icon-hamburger span,
-.has-cover.scroll-down .icon-hamburger span:before,
-.has-cover.scroll-down .icon-hamburger span:after {
-    background: #1b1b1b;
-  }
-
-  .scroll-down .button {
-    opacity: 0;
-  }
-
   .logo {
     width: 40px;
     overflow: hidden;
   }
 }
+/* ! Cover */
+.cover {
+  height: 100vh;
+  position: relative;
+  background: #333;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  z-index: 0;
+}
+
+.cover__content {
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cover:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.5;
+}
+
 /* ! Transitions */
 .transition-fade {
   transition: 0.1s;
@@ -907,6 +789,12 @@ html.is-animating .transition-fade {
 
 .text-center {
   text-align: center;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 .text-white h1,

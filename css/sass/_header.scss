@@ -1,33 +1,37 @@
 /* ! Header */
 
-.fixed{position: fixed;z-index: 10;width: 100%;}
-.header{display: flex; justify-content: space-between;width: 100%;top:0; max-width: 1160px; margin: 0 auto;}
+.logo{display: block;padding: 10px;text-align: center;margin-top: 15px; z-index:110;}
 
-.header__icon{display: none;width: 130px;position: relative;color:$white;}
+/* ! Menu Side */
 
-.header__cta,
-.header__logo{width: 130px;}
+.menu-side{position: fixed; top:50%; left:0%; transform: translateY(-50%);}
 
-.header__cta .button{width: 100%;text-decoration: none;}
+/* ! Menu Hidden */
+
+.menu-hidden{position: fixed; top:0; left:0; width: 100vw; height:100vh; background: $color-01; z-index:100;}
+
+.menu-hidden__items{list-style-type: none;}
+.menu-hidden__items a{color:$white; font-size: 60px;}
 
 
-.site-nav{padding: 0;list-style-type: none;position: relative;}
-.site-nav > li {display: inline-block;}
-.site-nav > li a{display: block;padding: 20px; color:$black; opacity: 0.5; text-decoration: none;}
-@media (min-width: 768px) {
-  .has-cover .site-nav > li a{color:$white;}
+@media (max-width: 767px) {
+
+  .icon-hamburger{ width: 30px;height: 30px;position: absolute;top:20px; right:20px}
+  .icon-hamburger span {height: 4px;width: 100%; position: absolute; background: $black; top: 11px; transition: all 0.2s ease-in-out;}
+  .icon-hamburger span:before,
+  .icon-hamburger span:after{height: 4px;width: 100%; position: absolute; background: $black; content: ' '; margin-top: -10px; transition: all 0.3s cubic-bezier(.215, .61, .355, 1);}
+  .icon-hamburger span:after{margin-top: 10px}
+
+  .icon-hamburger--open span{background: transparent!important;}
+  .icon-hamburger--open span:before{transform: rotate(45deg);margin-top: 0;}
+  .icon-hamburger--open span:after{transform: rotate(-45deg);margin-top: 0;}
+
+  .scroll-down .icon-hamburger span,
+  .scroll-down .icon-hamburger span:before,
+  .scroll-down .icon-hamburger span:after{background: $black;}
+
+
+  .logo{width: 40px;overflow: hidden;}
+
 }
 
-.logo{display: block;padding: 10px;text-align: center;margin-top: 15px;}
-
-
-
-/* Active state */
-
-.header__menu{position: relative;}
-.line-menu{position: absolute;height: 2px; background: $color-hover; bottom:10px;}
-.active a{opacity: 1!important}
-
-@media (max-width: 768px) {
-  .line-menu{display: none;}
-}
