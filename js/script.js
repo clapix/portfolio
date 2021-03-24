@@ -50,7 +50,7 @@ jQuery(function($) {
 
       body_el = document.body;
 
-      if(scroll_pos > 600) {
+      if (scroll_pos > 300) {
         body_el.classList.add( "scroll-down" );
       } else {
         body_el.classList.remove( "scroll-down" );

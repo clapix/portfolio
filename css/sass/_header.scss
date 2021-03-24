@@ -1,6 +1,6 @@
 /* ! Header */
 
-.logo{display: block;padding: 10px;text-align: center;margin-top: 15px; z-index:110;}
+.logo{position:fixed; display: block;padding: 10px;text-align: center;margin-top: 15px; z-index:110;}
 
 /* ! Menu Side */
 
@@ -8,28 +8,31 @@
 
 /* ! Menu Hidden */
 
-.menu-hidden{position: fixed; top:0; left:0; width: 100vw; height:100vh; background: $color-01; z-index:100;}
+.menu-hidden{transition: all 1s cubic-bezier(.215, .61, .355, 1); transform: translateX(-100%); position: fixed; top:0; left:0; width: 100vw; height:100vh; background: $color-01; z-index:100;}
 
-.menu-hidden__items{list-style-type: none;}
+.menu-hidden__items, .menu-side__items{list-style-type: none;}
 .menu-hidden__items a{color:$white; font-size: 60px;}
 
+.hamburger{border:1px solid red; width: 50px; height: 50px; position:relative; top: 50%; left: 0; margin-top: -25px; transform: translateX(-100%);transition: transform 1s cubic-bezier(.215, .61, .355, 1); }
+
+.scroll-down .hamburger{transform: translateX(0%);}
+
+.menu-side__items{transition: transform 1s cubic-bezier(.215, .61, .355, 1);}
+.menu-side__items a{display:block;padding:10px 20px; font-size: 18px; color:$black;}
+.scroll-down .menu-side__items{transform: translateX(-100%); }
+
+
+.icon-hamburger{ width: 30px;height: 30px;position: absolute;top:20px; right:20px}
+.icon-hamburger span {height: 4px;width: 100%; position: absolute; background: $black; top: 11px; transition: all 0.2s ease-in-out;}
+.icon-hamburger span:before,
+.icon-hamburger span:after{height: 4px;width: 100%; position: absolute; background: $black; content: ' '; margin-top: -10px; transition: all 0.3s cubic-bezier(.215, .61, .355, 1);}
+.icon-hamburger span:after{margin-top: 10px}
+
+.icon-hamburger--open span{background: transparent!important;}
+.icon-hamburger--open span:before{transform: rotate(45deg);margin-top: 0;}
+.icon-hamburger--open span:after{transform: rotate(-45deg);margin-top: 0;}
 
 @media (max-width: 767px) {
-
-  .icon-hamburger{ width: 30px;height: 30px;position: absolute;top:20px; right:20px}
-  .icon-hamburger span {height: 4px;width: 100%; position: absolute; background: $black; top: 11px; transition: all 0.2s ease-in-out;}
-  .icon-hamburger span:before,
-  .icon-hamburger span:after{height: 4px;width: 100%; position: absolute; background: $black; content: ' '; margin-top: -10px; transition: all 0.3s cubic-bezier(.215, .61, .355, 1);}
-  .icon-hamburger span:after{margin-top: 10px}
-
-  .icon-hamburger--open span{background: transparent!important;}
-  .icon-hamburger--open span:before{transform: rotate(45deg);margin-top: 0;}
-  .icon-hamburger--open span:after{transform: rotate(-45deg);margin-top: 0;}
-
-  .scroll-down .icon-hamburger span,
-  .scroll-down .icon-hamburger span:before,
-  .scroll-down .icon-hamburger span:after{background: $black;}
-
 
   .logo{width: 40px;overflow: hidden;}
 
