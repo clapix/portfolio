@@ -58,16 +58,16 @@ jQuery(function($) {
 
     });
 
-    scroll.on('call', func => {
-      if(func == "bg-red"){
-        $('body').toggleClass('bg-red');
-      } else if(func == "bg-yellow"){
-        $('body').toggleClass('bg-yellow');
-      } else if(func == "bg-green"){
-        $('body').toggleClass('bg-green');
-      }
+    // scroll.on('call', func => {
+    //   if(func == "bg-red"){
+    //     $('body').toggleClass('bg-red');
+    //   } else if(func == "bg-yellow"){
+    //     $('body').toggleClass('bg-yellow');
+    //   } else if(func == "bg-green"){
+    //     $('body').toggleClass('bg-green');
+    //   }
 
-    });
+    // });
 
 
   }
@@ -75,15 +75,15 @@ jQuery(function($) {
   scrollDetect();
 
 
-  $( ".header__icon" ).on('click', function() {
-    $('.header__menu').toggleClass('header__menu--open');
+  $(".icon-hamburger").on('click', function () {
     $('.icon-hamburger').toggleClass('icon-hamburger--open');
+    $('.menu-hidden').toggleClass('menu-hidden--open');
   });
 
-  $( ".header__cta .button" ).on('click', function() {
-    $('.line-menu').css("width", 0);
-    $( "#main-menu ul li" ).removeClass('active');
-  });
+  // $( ".header__cta .button" ).on('click', function() {
+  //   $('.line-menu').css("width", 0);
+  //   $( "#main-menu ul li" ).removeClass('active');
+  // });
 
 
 
@@ -92,68 +92,68 @@ jQuery(function($) {
 
   /* Line Menu Animation */
 
-  var nav = $( "#main-menu" );
-  var line = $( ".line-menu" );
+  // var nav = $( "#main-menu" );
+  // var line = $( ".line-menu" );
 
-  var active = nav.find( ".active" );
-  var pos = 0;
-  var wid = 0;
+  // var active = nav.find( ".active" );
+  // var pos = 0;
+  // var wid = 0;
 
-  if(active.length){ // se active esiste
-    pos = active.position().left; // prendo la position
-    wid = active.width(); // prenda la larghezza dell'elemento con classe active
-    line.css({
-      left: pos,
-      width: wid
-    });
-  }
+  // if(active.length){ // se active esiste
+  //   pos = active.position().left; // prendo la position
+  //   wid = active.width(); // prenda la larghezza dell'elemento con classe active
+  //   line.css({
+  //     left: pos,
+  //     width: wid
+  //   });
+  // }
 
-  nav.find("ul li a").click(function() {
+  // nav.find("ul li a").click(function() {
 
-    if(!$(this).parent().hasClass("active")){ // se l'elelemtno cliccato non ha classe active
+  //   if(!$(this).parent().hasClass("active")){ // se l'elelemtno cliccato non ha classe active
 
-      nav.find("ul li").removeClass("active"); // rumovere la classe active
+  //     nav.find("ul li").removeClass("active"); // rumovere la classe active
 
-      var _this = $(this);
+  //     var _this = $(this);
 
-      var position = _this.parent().position(); // recuperioamo posizione dell'elemento cliccato
-      var width = _this.parent().width(); // recuperioamo la larghezza dell'elemento cliccato
+  //     var position = _this.parent().position(); // recuperioamo posizione dell'elemento cliccato
+  //     var width = _this.parent().width(); // recuperioamo la larghezza dell'elemento cliccato
 
-      if(position.left >= pos) {
+  //     if(position.left >= pos) {
 
-        line.animate({
-          width: (width + (position.left - pos)) // allunghiamo la linea
-        }, 300, function(){
-          line.animate({
-            width: width, // accorciamo la linea
-            left: position.left // spostiam la linea
-          }, 150);
-          _this.parent().addClass("active"); // aggiungiam la classe active
-        });
+  //       line.animate({
+  //         width: (width + (position.left - pos)) // allunghiamo la linea
+  //       }, 300, function(){
+  //         line.animate({
+  //           width: width, // accorciamo la linea
+  //           left: position.left // spostiam la linea
+  //         }, 150);
+  //         _this.parent().addClass("active"); // aggiungiam la classe active
+  //       });
 
-      } else {
+  //     } else {
 
-        line.animate({
-          left: position.left, // sposto la linea
-          width: (wid + ( pos - position.left )) // allunghiamo la linea
-        }, 300, function(){
-          line.animate({
-            width: width // accorcire la linea
-          }, 150);
-          _this.parent().addClass("active"); // aggiungiam la classe active
-        });
+  //       line.animate({
+  //         left: position.left, // sposto la linea
+  //         width: (wid + ( pos - position.left )) // allunghiamo la linea
+  //       }, 300, function(){
+  //         line.animate({
+  //           width: width // accorcire la linea
+  //         }, 150);
+  //         _this.parent().addClass("active"); // aggiungiam la classe active
+  //       });
 
-      }
+  //     }
 
-      pos = position.left; // resettimao i valori
-      wid = width; // resettimao i valori
-
-
-    }
+  //     pos = position.left; // resettimao i valori
+  //     wid = width; // resettimao i valori
 
 
+  //   }
 
-  });
+
+
+  // });
 
 });
 
