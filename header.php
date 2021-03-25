@@ -66,7 +66,7 @@
         <div class="col-50 vertical-center">
           <div>
             <h3>Titolo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed perferendis repudiandae magni ullam tenetur, possimus soluta, omnis facere, quas eius hic obcaecati ducimus sunt excepturi quaerat dolores nihil ex blanditiis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <a href="<?php echo get_permalink( get_page_by_path( 'contatti' ) ) ?>" class="button">Contatti</a>
           </div>
         </div>
