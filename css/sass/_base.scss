@@ -21,7 +21,7 @@ body{color:$black;font-family: Lato; transition: all 1s cubic-bezier(.215, .61, 
   body { overflow: hidden }
 }
 
-.scroll-container{overflow:hidden; border:solid 1px red ; padding: 20px 20px 0 210px;} //così da non sovrapporsi all'icona hamburger (210px circa larghezza menu)
+.scroll-container{overflow:hidden; padding: 20px 20px 0 210px;} //così da non sovrapporsi all'icona hamburger (210px circa larghezza menu)
 
 @media (max-width: 767px){
   .scroll-container{padding: 15px 15px 0 55px;}

@@ -26,7 +26,7 @@ jQuery(function($) {
   const swup = new Swup(options);
 
   document.addEventListener('swup:contentReplaced', (event) => {
-    $('.header__menu').removeClass('header__menu--open');
+    $('.menu-hidden').removeClass('menu-hidden--open');
     $('.icon-hamburger').removeClass('icon-hamburger--open');
   });
 
