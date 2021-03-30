@@ -31,7 +31,7 @@
   <div class="preloader"></div>
       
     <a href="<?php echo home_url(); ?>" class="logo">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" alt="">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cloudy-logo.svg" alt="">
     </a>
   
 

@@ -136,12 +136,25 @@ h4, .subtitle {
 }
 /* ! Header */
 .logo {
-  position: fixed;
   display: block;
+  position: fixed;
+  top: 20px;
+  left: 10px;
   padding: 10px;
   text-align: center;
   margin-top: 15px;
   z-index: 110;
+  overflow: hidden;
+  width: 150px;
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.logo img {
+  width: 140px;
+}
+
+.scroll-down .logo {
+  width: 43px;
 }
 
 /* ! Menu Side */
@@ -176,7 +189,7 @@ h4, .subtitle {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #ff3a00;
+  background: #8402FE;
   z-index: 100;
 }
 

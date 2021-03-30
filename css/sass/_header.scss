@@ -1,6 +1,11 @@
 /* ! Header */
 
-.logo{position:fixed; display: block;padding: 10px;text-align: center;margin-top: 15px; z-index:110;}
+.logo{display: block; position:fixed; top: 20px; left:10px; padding: 10px;text-align: center;margin-top: 15px; z-index:110; overflow:hidden; width: 150px; transition: all 1s cubic-bezier(.215, .61, .355, 1); }
+
+.logo img{width: 140px;}
+
+.scroll-down .logo{width: 43px;}
+
 
 /* ! Menu Side */
 
