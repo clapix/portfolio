@@ -30,12 +30,12 @@
 
   <div class="preloader"></div>
       
-    <a href="<?php echo home_url(); ?>" class="logo">
+    <a href="<?php echo home_url(); ?>" class="logo fade-left">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cloudy-logo.svg" alt="">
     </a>
   
 
-    <div class="menu-side">
+    <div class="menu-side delay-3">
 
       <?php /* add menu set in location header */
       wp_nav_menu(array(

@@ -162,11 +162,12 @@ h4, .subtitle {
   position: fixed;
   top: 50%;
   left: 0%;
-  transform: translateY(-50%);
+  transform: translate(-100%, -50%);
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.menu-side__items {
-  transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+.menu-side.is-inview {
+  transform: translate(0%, -50%);
 }
 
 .menu-side__items a {
@@ -613,7 +614,7 @@ html.is-animating .transition-fade {
 }
 
 .text-container .button {
-  animation: tada 2s 1 cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: pulse 2s 1 cubic-bezier(0.215, 0.61, 0.355, 1);
   animation-delay: 10.2s;
 }
 
@@ -659,6 +660,17 @@ html.is-animating .transition-fade {
   100% {
     top: 0px;
     opacity: 1;
+  }
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
   }
 }
 @media (max-width: 768px) {

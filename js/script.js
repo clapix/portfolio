@@ -160,5 +160,5 @@ jQuery(function($) {
 
  jQuery(window).on('load',function(){
     jQuery('.preloader').fadeOut('fast');
-    jQuery('.social-icons a, .bottom-icon-left, .bottom-icon-right, .header').addClass('is-inview');
+   jQuery('.logo, .menu-side').addClass('is-inview');
   });
