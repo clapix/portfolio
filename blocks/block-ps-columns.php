@@ -1,15 +1,3 @@
-<style>
-
-.block-ps-columns img{width: 100%; height: 300px; object-fit: cover; margin-bottom: 20px;}
-
-@media (max-width: 767px) {
-  .block-ps-columns.grid{display: block;}
-  .block-ps-columns.grid .col{margin-bottom: 60px;}
-}
-
-</style>
-
-
 <div data-scroll-section class="grid mt-3 mb-3 block-ps-columns <?php block_field('className'); ?>">
 
   <?php if(block_value('title-1') != '') { ?>

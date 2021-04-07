@@ -1,6 +1,7 @@
 /* ! Locomotive Scroll  */
 
-[data-scroll-section]{position: relative; display: block;}
+[data-scroll-section]{position: relative;}
+// [data-scroll-section]{position: relative; display: block;}
 .wp-block-image img,
 .img-article{height: 400px;width: 100%;object-fit: cover;}
 .img-article-small{height: 180px;width: 100%;object-fit: cover;}

@@ -3,6 +3,43 @@ use function Genesis\CustomBlocks\add_block;
 use function Genesis\CustomBlocks\add_field;
 
 
+/* Intro */
+
+function register_ps_intro_block() {
+  add_block( 'ps-intro', array( 'icon' => 'waves' ) );
+
+  add_field( 'ps-intro', 'frase-1', array(
+    'control' => 'text'
+  ) );
+
+  add_field( 'ps-intro', 'frase-2', array(
+    'control' => 'text'
+  ) );
+
+  add_field( 'ps-intro', 'frase-3', array(
+    'control' => 'text'
+  ) );
+
+  add_field( 'ps-intro', 'frase-4', array(
+    'control' => 'text'
+  ) );
+
+  add_field( 'ps-intro', 'cta', array(
+    'control' => 'text',
+    'width' => '50'
+  ) );
+
+  add_field( 'ps-intro', 'cta-link', array(
+    'control' => 'text',
+    'width' => '50'
+  ) );
+}
+
+add_action( 'genesis_custom_blocks_add_blocks', 'register_ps_intro_block' );
+
+
+
+
 /* Media Panel */
 
 function register_ps_media_panel_block() {
