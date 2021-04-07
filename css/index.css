@@ -584,7 +584,8 @@ html.is-animating .transition-fade {
 }
 
 .text-container h3 {
-  font-size: 60px;
+  font-size: 80px;
+  font-weight: 400;
   max-width: 1000px;
 }
 
@@ -672,7 +673,7 @@ html.is-animating .transition-fade {
 /* ! Block Big Text */
 .block-ps-big-text strong {
   font-size: 100px;
-  color: red;
+  color: #98E5DC;
   display: block;
 }
 

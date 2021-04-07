@@ -39,6 +39,33 @@ add_action( 'genesis_custom_blocks_add_blocks', 'register_ps_intro_block' );
 
 
 
+/* Big Text */
+
+function register_ps_big_text_block() {
+  add_block( 'ps-big-text', array( 'icon' => 'waves' ) );
+
+  add_field( 'ps-big-text', 'title' );
+
+  add_field( 'ps-big-text', 'description-1', array(
+    'control' => 'textarea',
+    'width' => '25'
+  ) );
+  add_field( 'ps-big-text', 'description-2', array(
+    'control' => 'textarea',
+    'width' => '25'
+  ) );
+  add_field( 'ps-big-text', 'description-3', array(
+    'control' => 'textarea',
+    'width' => '25'
+  ) );
+
+}
+
+add_action( 'genesis_custom_blocks_add_blocks', 'register_ps_big_text_block' );
+
+
+
+
 
 /* Media Panel */
 
