@@ -37,6 +37,7 @@
 .icon-hamburger span:before,
 .icon-hamburger span:after{height: 4px;width: 100%; position: absolute; background: $black; content: ' '; margin-top: -10px; transition: all 0.3s cubic-bezier(.215, .61, .355, 1);}
 .icon-hamburger span:after{margin-top: 10px}
+.bg-dark .icon-hamburger span:before, .bg-dark .icon-hamburger span:after, .bg-dark .icon-hamburger span{background: $white;}
 
 .icon-hamburger--open span{background: transparent!important;}
 .icon-hamburger--open span:before{transform: rotate(45deg);margin-top: 0; background-color: $white;}

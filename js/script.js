@@ -58,16 +58,12 @@ jQuery(function($) {
 
     });
 
-    // scroll.on('call', func => {
-    //   if(func == "bg-red"){
-    //     $('body').toggleClass('bg-red');
-    //   } else if(func == "bg-yellow"){
-    //     $('body').toggleClass('bg-yellow');
-    //   } else if(func == "bg-green"){
-    //     $('body').toggleClass('bg-green');
-    //   }
+    scroll.on('call', func => {
+      if (func == "bg-dark") {
+        $('body').toggleClass('bg-dark');
+      }
 
-    // });
+    });
 
 
   }

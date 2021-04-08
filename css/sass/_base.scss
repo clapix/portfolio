@@ -17,6 +17,7 @@ body.admin-bar .navbar-fixed-top { position: fixed; top: 32px; z-index: 1000;}
 html, body{height: 100vh;}
 body{color:$black;font-family: Lato; transition: all 1s cubic-bezier(.215, .61, .355, 1);}
 
+
 @media (min-width: 1024px) {
   body { overflow: hidden }
 }
@@ -30,6 +31,8 @@ body{color:$black;font-family: Lato; transition: all 1s cubic-bezier(.215, .61, 
 .container{ margin: 0 auto; max-width: 1200px;}
 
 a{text-decoration: none;}
+
+
 
 /* functional stuff */
 

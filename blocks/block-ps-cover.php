@@ -5,7 +5,7 @@ $image_attributes =  wp_get_attachment_image_src( $attachment_id , 'large' );
 ?>
 <div data-scroll-section class="block-ps-cover <?php block_field('className'); ?>" style="background: url(<?php echo $image_attributes[0]; ?>) center center;  background-size: cover;">
   <div class="grid">
-    <div class="col-100 m-3">
+    <div class="col-100 m-3 ml-4">
       <h3 class="headline">
         <span data-scroll class="text-reveal"><b><?php block_field( 'title' ); ?></b></span>
       </h3>

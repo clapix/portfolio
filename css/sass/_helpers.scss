@@ -28,10 +28,13 @@
 
 @media (max-width: 767px) {
   .m-4 { margin: 100px; }
-  .mt-4{margin-top: 100px}
+  .mt-4{ margin-top: 100px}
   .ml-4 { margin-left: 100px; }
   .mr-4 { margin-right: 100px; }
   .mb-4 { margin-bottom: 100px; }
+
+  // .block-ps-big-text.mt-4{margin-top:-30px;}
+  .block-ps-cover .ml-4 { margin-left: 30px; }
 
   .mt-sma-0{margin-top: 0;}
   .mt-sma-1{margin-top: 20px;}

@@ -55,6 +55,9 @@
 
 .block-ps-big-text strong{font-size: 100px;color:$color-02; display: block;}
 
+@media (max-width: 767px){
+  .block-ps-big-text strong{font-size: 70px;}
+}
 
 
 /* ! Block Panel */

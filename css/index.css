@@ -257,6 +257,10 @@ h4, .subtitle {
   margin-top: 10px;
 }
 
+.bg-dark .icon-hamburger span:before, .bg-dark .icon-hamburger span:after, .bg-dark .icon-hamburger span {
+  background: #ffffff;
+}
+
 .icon-hamburger--open span {
   background: transparent !important;
 }
@@ -306,7 +310,7 @@ h4, .subtitle {
 .cover {
   height: 600px;
   position: relative;
-  background: #333;
+  background: #3f3e3e;
   display: flex;
   width: 100%;
   align-items: center;
@@ -689,6 +693,11 @@ html.is-animating .transition-fade {
   display: block;
 }
 
+@media (max-width: 767px) {
+  .block-ps-big-text strong {
+    font-size: 70px;
+  }
+}
 /* ! Block Panel */
 .block-ps-panel {
   padding: 100px;
@@ -793,6 +802,118 @@ html.is-animating .transition-fade {
 }
 .block-test {
   border: 1px solid red;
+}
+
+/* ! Locomotive Scroll  */
+[data-scroll-section] {
+  position: relative;
+}
+
+.wp-block-image img,
+.img-article {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-article-small {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .wp-block-image img,
+.img-article,
+.img-article-small {
+    height: 240px;
+  }
+}
+/* ! Scroll Color Change */
+body.bg-dark {
+  background: #1b1b1b;
+  color: #ffffff;
+}
+
+body.bg-dark h1,
+body.bg-dark h2,
+body.bg-dark h3,
+body.bg-dark h4,
+body.bg-dark p {
+  color: #ffffff;
+}
+
+body.bg-dark .button {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* ---------------------- */
+/* ! Modules and Elements */
+/* ---------------------- */
+/* ! Preloader */
+.preloader {
+  background: #ffffff url("../img/oval.svg") no-repeat center center;
+  background-size: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+/* ! intro text */
+.intro-text {
+  padding: 150px 0 50px 0;
+}
+
+.intro-text h1 {
+  min-width: 700px;
+}
+
+/* ! Footer */
+.footer {
+  background: #3f3e3e;
+  min-height: 300px;
+  color: #ffffff;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* ! Buttons */
+.button {
+  display: inline-block;
+  color: #1b1b1b;
+  border: 3px solid #1b1b1b;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.28, 0.44, 0.49, 1);
+}
+
+.button:before {
+  content: " ";
+  width: 100%;
+  height: calc(100% + 0.2rem);
+  background: #1b1b1b;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: all 0.3s cubic-bezier(0.28, 0.44, 0.49, 1);
+}
+
+.button:hover:before {
+  transform: translateY(0%);
+}
+
+.button:hover {
+  color: #ffffff !important;
 }
 
 /* ! Helpers */
@@ -915,6 +1036,10 @@ html.is-animating .transition-fade {
 
   .mb-4 {
     margin-bottom: 100px;
+  }
+
+  .block-ps-cover .ml-4 {
+    margin-left: 30px;
   }
 
   .mt-sma-0 {
@@ -1130,99 +1255,6 @@ html.is-animating .transition-fade {
 .grid .grid {
   margin-left: -15px;
   margin-right: -15px;
-}
-
-/* ! Locomotive Scroll  */
-[data-scroll-section] {
-  position: relative;
-}
-
-.wp-block-image img,
-.img-article {
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.img-article-small {
-  height: 180px;
-  width: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 767px) {
-  .wp-block-image img,
-.img-article,
-.img-article-small {
-    height: 240px;
-  }
-}
-/* ---------------------- */
-/* ! Modules and Elements */
-/* ---------------------- */
-/* ! Preloader */
-.preloader {
-  background: #ffffff url("../img/oval.svg") no-repeat center center;
-  background-size: 200px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-}
-
-/* ! intro text */
-.intro-text {
-  padding: 150px 0 50px 0;
-}
-
-.intro-text h1 {
-  min-width: 700px;
-}
-
-/* ! Footer */
-.footer {
-  background: #3f3e3e;
-  min-height: 300px;
-  color: #ffffff;
-  margin-top: 100px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-/* ! Buttons */
-.button {
-  display: inline-block;
-  color: #1b1b1b;
-  border: 3px solid #1b1b1b;
-  padding: 10px 20px;
-  margin-top: 15px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.28, 0.44, 0.49, 1);
-}
-
-.button:before {
-  content: " ";
-  width: 100%;
-  height: calc(100% + 0.2rem);
-  background: #1b1b1b;
-  z-index: -1;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(100%);
-  transition: all 0.3s cubic-bezier(0.28, 0.44, 0.49, 1);
-}
-
-.button:hover:before {
-  transform: translateY(0%);
-}
-
-.button:hover {
-  color: #ffffff !important;
 }
 
 /* ------------ */

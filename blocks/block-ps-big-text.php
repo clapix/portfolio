@@ -1,5 +1,5 @@
 <div data-scroll-section class="block-ps-big-text mt-4 mb-4 <?php block_field('className'); ?>">
-  <div class="grid">
+  <div class="grid" data-scroll data-scroll-call="bg-dark" data-scroll-repeat>
     <div class="col-100">
       <h3 class="headline">
         <span data-scroll class="text-reveal"><b><?php block_field( 'title' ); ?></b></span>
