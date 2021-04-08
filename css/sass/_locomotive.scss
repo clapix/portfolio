@@ -22,3 +22,6 @@ body.bg-dark h4,
 body.bg-dark p {color:$white;}
 
 body.bg-dark .button{color: $white;border-color: $white;}
+
+body.bg-dark .col-black p, body.bg-dark .col-black h3{color:$black;}
+body.bg-dark .col-black .button{color: $black;border-color: $black;}

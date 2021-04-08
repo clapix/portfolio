@@ -50,7 +50,7 @@
 
     <div class="menu-hidden">
 
-      <div class="grid">
+      <div class="grid ml-3">
         <div class="col-50 vertical-center">
 
           <?php /* add menu set in location header */
@@ -63,7 +63,7 @@
           ?>
         </div>
 
-        <div class="col-50 vertical-center">
+        <div class="col-50 vertical-center col-black">
           <div>
             <h3>Titolo</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

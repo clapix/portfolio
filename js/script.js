@@ -25,6 +25,11 @@ jQuery(function($) {
 
   const swup = new Swup(options);
 
+  $("a").click(function () {
+    $('.menu-hidden').removeClass('menu-hidden--open');
+    $('.icon-hamburger').removeClass('icon-hamburger--open');
+  });
+
   document.addEventListener('swup:contentReplaced', (event) => {
     $('.menu-hidden').removeClass('menu-hidden--open');
     $('.icon-hamburger').removeClass('icon-hamburger--open');
